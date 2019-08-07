@@ -32,6 +32,15 @@ eureka:
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    web: debug
+
 ---
 server:
   port: 8001
@@ -62,3 +71,11 @@ eureka:
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    web: debug
