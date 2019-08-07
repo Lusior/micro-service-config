@@ -37,9 +37,6 @@ management:
     web:
       exposure:
         include: "*"
-logging:
-  level:
-    web: debug
 
 ---
 server:
@@ -76,6 +73,3 @@ management:
     web:
       exposure:
         include: "*"
-logging:
-  level:
-    web: debug
