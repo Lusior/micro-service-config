@@ -2,13 +2,13 @@ spring:
   profiles:
     active:
     - dev
-server:
-  port: 7001
 ---
+server:
+  port: 7004
 spring:
   profiles: dev
   application:
-    name: micro-service-config-eureka-client
+    name: micro-service-config-client-eureka
 eureka:
   instance:
     hostname: eureka7001.com
@@ -19,11 +19,11 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
 ---
 server:
-  port: 7001
+  port: 7004
 spring:
   profiles: test
   application:
-    name: micro-service-config-eureka-client
+    name: micro-service-config-client-eureka
 eureka:
   instance:
     hostname: eureka7001.com
@@ -32,5 +32,3 @@ eureka:
     fetch-registry: false #不通过eureka获取注册信息
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-
-
