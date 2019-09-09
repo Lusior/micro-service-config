@@ -2,6 +2,17 @@ spring:
   profiles:
   active:
     - dev
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 ---
 server:
   port: 8005
